@@ -1,0 +1,190 @@
+body {
+  font-family: 'Roboto', sans-serif;;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  min-height: 100vh;
+  background-color: #111827;
+}
+
+header {
+  width: 100%;
+  background-color: #1F2937;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: auto;
+  margin: 0 0 0 0;
+  padding-left: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: left;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.logo-text
+{
+  font-family: 'Roboto', sans-serif;
+  color: #ccc;
+  margin-left: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: right;
+  margin-right: 50px;
+ 
+}
+
+.nav-links li {
+  margin-left: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  text-align: right;
+  color: #fff;
+}
+
+.nav-links a:hover {
+  color: #099EFD; /* Color when hovering */
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:25px;
+}
+
+.category-sub-text
+{
+  font-family: 'Montserrat', sans-serif;
+  color: #ccc;
+  font-size: small;
+}
+
+hr.spacer {
+  height: 2px;
+  background-color: #ccc;
+  border: none;
+  margin: 20px 0;
+}
+
+.category {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+h2 {
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.tile {
+  position: relative;
+  border: 1px;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  width: 280px;
+  height: 200px;
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+.tile:hover .tile-name {
+  color: #099EFD; /* Background color on hover */
+}
+
+.tile_con {
+  position: relative;
+  border: 1px;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  width: 280px;
+  height: 200px;
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+.tile_con:hover .tile-name{
+ color:#099EFD;
+}
+
+.tile_con img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.tile img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tile-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1F2937;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.tile-name {
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+.tile-platform {
+  margin-left: 10px;
+  padding-bottom: 5px;
+  text-align: left;
+  color: gray;
+}
+
+.tooltip {
+  position: absolute;
+  top:-40px; /* Position the tooltip below the tile */
+  left: 50%; /* Center the tooltip horizontally */
+  transform: translateX(-50%); /* Adjust horizontal alignment */
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0; /* Initially hide the tooltip */
+  transition: opacity 0.3s ease;
+  white-space: nowrap; /* Disable word wrapping */
+}
+
+.tile:hover .tooltip {
+  opacity: 1; /* Show the tooltip on hover */
+}
